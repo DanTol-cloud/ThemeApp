@@ -21,8 +21,6 @@ const IconChangeButton = ({newIcon, setNewIcon}: IconChangeButtonProps) => {
   const [activeElements, setActiveElements] = useState<number[]>([]);
   const handleIconChange = async (iconType: string, iconName: string) => {
     setNewIcon({...newIcon, [iconType]: iconName});
-
-    // @ts-ignore
     await toggleNewValue({newValue: {...newIcon, [iconType]: iconName}, setNewValue: setNewIcon, key: 'icons'});
   };
 

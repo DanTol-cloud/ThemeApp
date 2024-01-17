@@ -30,7 +30,6 @@ const Home = () => {
     };
 
     const getIcons = async () => {
-      // @ts-ignore
       await getSavedChanges({setValue: setNewIcon, key: 'icons'});
     };
 
